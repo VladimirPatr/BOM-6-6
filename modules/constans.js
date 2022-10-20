@@ -16,6 +16,9 @@ const totalPriceHeader = document.querySelector('.totalprice-header');
 const totalPriceArray = document.getElementsByClassName('totalprice-td');
 let DI =5;
 let priceAll =5;
+const overlayErr = document.querySelector('.overlay-err');
+const errMessage = document.querySelector('.err-message');
+const URL = 'https://cryptic-hollows-41521.herokuapp.com/api/goods/';
 
 export default {
     btnAdd,
@@ -34,6 +37,9 @@ export default {
     inputModalCount,
     totalPriceHeader,
     totalPriceArray,
+    overlayErr,
+    errMessage,
+    URL,
   };
 
   window.ID = DI;

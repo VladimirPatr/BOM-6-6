@@ -63,7 +63,7 @@ body {
 	text-transform: uppercase;
 	color: #6E6893;
   }
-.overlay, .overlay-err {
+.overlay, .overlay-err, .overlay-table {
 	position: fixed;
     top: 0;
     left: 0;
@@ -71,6 +71,11 @@ body {
     height: 100%;
     background: rgba(0,0,0,0.8);
     display: none;
+}
+.overlay-table{
+	display: block;
+	z-index: -10;
+	background-color: #E5E5E5;
 }
 .close {
 	width: 20px;
@@ -81,9 +86,7 @@ body {
 	z-index: 5;
 }
 .wrapper {
-	padding-top: 300px;
-	position: relative;
-	background-color:#E5E5E5;
+	background-color: transparent;
 	width: 100%;
 	max-width: 1300px;
 	min-height: 1000px;

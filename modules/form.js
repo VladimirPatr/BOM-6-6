@@ -1,23 +1,13 @@
 import modulesConst from './constans.js';
-import modulesTable from './table.js';
 
 const {
-  overlayModal,
-  tBody,
-  formModal,
   checkModal,
   inputModalSale,
   totalPriceModal,
   inputModalPrice,
-  inputModalCount,
-  // ID,
-  // totalPriceALL        
+  inputModalCount,       
 } = modulesConst;
 
-const {
-  createRow,
-  calculationTotalPriceTable,
-} = modulesTable;
 
 
 //чекбокс и инпут в модальном окне
@@ -32,22 +22,22 @@ const checkboxInput = () => {
     });
     };
     
-    //функция событий при отправке форме
-    const sendingForm = () => {
-      formModal.addEventListener('submit', e => {
-        e.preventDefault();
+    // //функция событий при отправке форме
+    // const sendingForm = () => {
+    //   formModal.addEventListener('submit', e => {
+    //     e.preventDefault();
        
-        const formData = new FormData(e.target);
+    //     const formData = new FormData(e.target);
     
-        const newProduct = Object.fromEntries(formData);
+    //     const newProduct = Object.fromEntries(formData);
     
-        tBody.append(createRow(newProduct));
-        form.reset();
-        overlayModal.classList.remove('visible');
-        calculationTotalPriceTable();
+    //     tBody.append(createRow(newProduct));
+    //     form.reset();
+    //     overlayModal.classList.remove('visible');
+    //     calculationTotalPriceTable();
     
-      });
-    };
+    //   });
+    // };
     
   
     //расчет общей стоимости на форме при изменнии инпутов
@@ -84,7 +74,7 @@ const checkboxInput = () => {
 
   export default {
     checkboxInput,
-    sendingForm,
+    // sendingForm,
     calculationTotalPrice,
     priceFocus,
     countFocus,
